@@ -1,20 +1,20 @@
 var config = {
-  // 打包的入口文件
+  // Packaged Portal Files
   entry: './main.js',
 
-  // 配置打包结果，path定义输出文件夹，filename定义打包结果文件的名称
+  // Configure package results, path defines output folder, filename defines the name of the packaged result file
   output: {
     path: './',
     filename: 'index.js'
   },
 
-  // 设置服务器端口号
+  // Set server port number
   devServer: {
     inline: true,
     port: 7777
   },
-
-  // 配置模块的处理逻辑，用loaders定义加载器
+  devtool:"source-map",
+  // Configuration module processing logic, using loaders to define the loader
   module: {
     loaders: [
       {
