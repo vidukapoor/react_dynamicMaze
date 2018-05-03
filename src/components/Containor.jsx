@@ -2,20 +2,19 @@
  * @author vishwadeep
  */
 import React from 'react';
-import Row from './Row.jsx';
+import Tile from './Tile.jsx';
 
 class Containor extends React.Component {
-
     /**
      * @func renderRows()
      * @returns {array} of Rows
      * @see Row
      */
     renderRows() {
-        const { width, height } = this.props;
+        const { mazeArray } = this.props;
         const rows = [];
-        for (let i = 0; i < height; i++) {
-            rows.push(<Row {...this.props} key={i} curColoum={i}/>);
+        for (let i = 0; i < mazeArray.length; i++) {
+            rows.push(<Tile {...this.props} key={i} tileNumber={i} />);
         }
         return rows;
     }
@@ -26,7 +25,7 @@ class Containor extends React.Component {
     render() {
         return (
             <div>{this.renderRows()}</div>
-        )
+        );
     }
 }
 

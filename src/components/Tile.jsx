@@ -2,7 +2,6 @@
  * @author vishwadeep
  */
 import React from 'react';
-import Toy from './Toy.jsx';
 
 /**
  * 
@@ -10,11 +9,10 @@ import Toy from './Toy.jsx';
  * @returns the box with [50*50]
  * @see Toy
  */
-export const Tile = (props) => {
+export const Tile = ({ tileNumber }) => {
     return (
-    <div style={{ 'width': '50px', 'height': '50px', 'border': '1px solid #ddd', 'marginRight': '1px', 'marginBottom': '1px', 'float': 'left' }}>
-        <Toy {...props}/>
-    </div>)
+        <div style={{ 'width': '50px', 'height': '50px', 'border': '1px solid #ddd', 'marginRight': '1px', 'marginBottom': '1px', 'float': 'left' }} id={tileNumber}>
+        </div>)
 }
 
 export default Tile;
