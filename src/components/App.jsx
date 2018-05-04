@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import Containor from './Containor.jsx';
 
+const alignCenter = { 'textAlign': 'center' };
 class App extends Component {
   constructor(props) {
     super(props);
@@ -222,7 +223,7 @@ class App extends Component {
   render() {
     const { width, height } = this.state;
     return (
-      <div onKeyDown={(event) => this.handleKeyPress(event)} tabIndex='0' style={{ 'textAlign': 'center' }}>
+      <div onKeyDown={(event) => this.handleKeyPress(event)} tabIndex='0' style={alignCenter}>
         <h3>width:{width} height:{height}</h3>
         <Containor {...this.state} />
       </div>
